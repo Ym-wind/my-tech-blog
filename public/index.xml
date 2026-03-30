@@ -5,7 +5,13 @@
         <description>Recent content on ym的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 29 Mar 2026 12:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/my-tech-blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 30 Mar 2026 12:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/my-tech-blog/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>我的第一篇带图博客</title>
+            <link>http://localhost:1313/my-tech-blog/posts/image-test-post/</link>
+            <pubDate>Mon, 30 Mar 2026 12:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/my-tech-blog/posts/image-test-post/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/my-tech-blog/&#34; alt=&#34;Featured image of post 我的第一篇带图博客&#34; /&gt;&lt;h3 id=&#34;1-文章头图&#34;&gt;1. 文章头图&#xA;&lt;/h3&gt;&lt;p&gt;上面的图片就是我们在配置区指定的 &lt;code&gt;image&lt;/code&gt; 头图，它会在首页卡片和文章顶部显示。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-文章内插图&#34;&gt;2. 文章内插图&#xA;&lt;/h3&gt;&lt;p&gt;你也可以在 Markdown 的内容区，像使用普通图片一样插入它：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;我是一张内插图&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;360px&#34; data-flex-grow=&#34;150&#34; height=&#34;960&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;http://localhost:1313/my-tech-blog/posts/image-test-post/cover.jpg&#34; srcset=&#34;http://localhost:1313/my-tech-blog/posts/image-test-post/cover_hu_fec35098cce0df06.jpg 800w, http://localhost:1313/my-tech-blog/posts/image-test-post/cover.jpg 1440w&#34; width=&#34;1440&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-公式测试&#34;&gt;3. 公式测试&#xA;&lt;/h3&gt;&lt;p&gt;顺手再测试一下我们之前的公式渲染，看看背景有没有消失：&lt;/p&gt;&#xA;&lt;p&gt;$$\tau_m \frac{dU(t)}{dt} = -(U(t) - U_{rest}) + R I(t)$$&lt;/p&gt;&#xA;&lt;p&gt;写完了，快去预览一下吧！&lt;/p&gt;&#xA;</description>
+        </item><item>
             <title>SNN 架构的初步探索与公式渲染测试</title>
             <link>http://localhost:1313/my-tech-blog/posts/snn-transformer-test-111/</link>
             <pubDate>Sun, 29 Mar 2026 12:00:00 +0800</pubDate>
