@@ -22,3 +22,27 @@ params:
   background:
     color: "#f4f4f4"
     image: "img/background.jpg" # 你的背景图
+
+  params:
+  # 开启评论区功能
+  comments:
+    enabled: true
+    provider: giscus
+    giscus:
+      repo: Ym-wind/my-tech-blog
+      repoId: "R_kgDOR0gNBA"      # 例如 "R_kgDOM..."
+      category: General                      # 对应你刚才在网页上选的分类
+      categoryId: "DIC_kwDOR0gNBM4C5mdY"  # 例如 "DIC_kwDOM..."
+      mapping: pathname
+      reactionsEnabled: 1
+      emitMetadata: 0
+      lightTheme: light
+      darkTheme: transparent_dark  # 完美适配Stack主题的暗黑模式
+
+menu:
+  main:
+    - identifier: about
+      name: 关于我 # 左侧菜单显示的文字
+      url: /about/
+      weight: 1 # 数字越小，排在越上面
+
