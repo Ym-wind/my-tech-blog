@@ -123,8 +123,22 @@
                 
             </ol>
         </li>
-    </ol>
-</aside>
+        
+        <div class="runtime-box" style="
+                padding: 20px; 
+                margin-top: auto; 
+                display: flex; 
+                align-items: center; 
+                gap: 8px; 
+                color: #ff69b4; 
+                font-size: 13px; 
+                font-weight: bold;
+                white-space: nowrap;
+            ">
+            <span>⚡</span>
+            <span>神经元放电: <span id="run-time-days">0</span> 天</span>
+        </div>
+    </aside>
 
     
 
@@ -456,22 +470,19 @@ $$</p>
         });
 
         
-        function runtime() {
-            var start = new Date("2026-03-30"); 
+        function updateRuntime() {
+            var start = new Date("2026-03-29"); 
             var now = new Date();
             var diff = now - start;
             var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            
-            var footer = document.querySelector('.footer');
-            if (footer && !document.getElementById('run-time')) {
-                var div = document.createElement('div');
-                div.id = 'run-time';
-                div.style.cssText = "font-size: 12px; color: #ff69b4; margin-top: 10px;";
-                div.innerHTML = "⚡ 神经元持续放电: " + days + " 天";
-                footer.appendChild(div);
+
+            var span = document.getElementById('run-time-days');
+            if (span) {
+                span.innerHTML = days;
             }
         }
-        setInterval(runtime, 1000);
+        
+        setInterval(updateRuntime, 1000);
 
         
         document.body.addEventListener('click', function (e) {
