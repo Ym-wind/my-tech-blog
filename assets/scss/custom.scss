@@ -1,9 +1,10 @@
 /* 1. 设置全屏背景图 */
 body {
-    background-image: url('/img/background.jpg');
-    background-size: cover;        /* 让图片等比例缩放铺满屏幕 */
-    background-attachment: fixed;  /* 极其炫酷的视觉差：页面滚动时背景不动 */
-    background-position: center;   /* 图片居中显示 */
+    /* 注意看这里的路径，改成了 ../img/ */
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
