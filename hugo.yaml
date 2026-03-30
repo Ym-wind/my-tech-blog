@@ -1,5 +1,5 @@
-baseURL: "https://Ym-wind.github.io/my-tech-blog/" 
-# 请把 yourname 换成你真实的 GitHub 用户名
+baseURL: "https://ym-wind.site/" 
+
 title: "ym的博客"
 theme: "hugo-theme-stack"
 languageCode: "zh-cn"
