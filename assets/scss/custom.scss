@@ -1,0 +1,19 @@
+/* 1. 设置全屏背景图 */
+body {
+    background-image: url('/img/background.jpg');
+    background-size: cover;        /* 让图片等比例缩放铺满屏幕 */
+    background-attachment: fixed;  /* 极其炫酷的视觉差：页面滚动时背景不动 */
+    background-position: center;   /* 图片居中显示 */
+    background-repeat: no-repeat;
+}
+
+/* 2. 让文章卡片和侧边栏变成半透明，透出你的背景图（可选，但强烈推荐！） */
+:root {
+    /* 白天模式下的卡片透明度 (0.85可以自己调，1是不透明，0是全透明) */
+    --card-background: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-scheme="dark"] {
+    /* 黑夜模式下的卡片透明度 */
+    --card-background: rgba(30, 30, 34, 0.85) !important;
+}

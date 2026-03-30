@@ -1,0 +1,24 @@
+baseURL: "https://Ym-wind.github.io/my-tech-blog/" 
+# 请把 yourname 换成你真实的 GitHub 用户名
+title: "ym的博客"
+theme: "hugo-theme-stack"
+languageCode: "zh-cn"
+hasCJKLanguage: true # 开启中文支持，优化字数统计
+
+params:
+  # 侧边栏配置
+  # 加入下面这两行，强制首页抓取 posts 文件夹！
+  article:
+    math: true
+
+  mainSections:
+    - posts
+  sidebar:
+    emoji: 🍥
+    subtitle: "探索脉冲神经网络的废物大学生"
+    avatar: "img/avatar.jpg" # 你的头像
+      
+  # 背景图配置
+  background:
+    color: "#f4f4f4"
+    image: "img/background.jpg" # 你的背景图
