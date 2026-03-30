@@ -18,3 +18,26 @@ body {
     /* 黑夜模式下的卡片透明度 */
     --card-background: rgba(30, 30, 34, 0.85) !important;
 }
+
+/* =========================================
+   头像框方案一：动态脉冲数据环 (SNN 风格)
+   ========================================= */
+.site-avatar img,
+[class*="avatar"] img {
+    padding: 4px !important;
+    border: 2px dashed #ffb6c1 !important;
+    border-radius: 50% !important;
+    animation: snn-pulse 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes snn-pulse {
+    0% {
+        box-shadow: 0 0 4px rgba(255, 105, 180, 0.4);
+        border-color: #ffb6c1;
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 105, 180, 0.4);
+        border-color: #ff1493;
+    }
+}

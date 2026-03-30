@@ -12,7 +12,7 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON # 这行是搜索引擎的灵魂
+    - json # 这行是搜索引擎的灵魂
 
 params:
   # 侧边栏配置
@@ -24,7 +24,6 @@ params:
   mainSections:
     - posts
   sidebar:
-    emoji: 🍥
     subtitle: "探索脉冲神经网络的废物大学生"
     avatar: "img/avatar.jpg" # 你的头像
       
