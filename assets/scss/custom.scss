@@ -41,3 +41,73 @@ body {
         border-color: #ff1493;
     }
 }
+/* =========================================
+   猛男/少女粉专属：定制圆润滚动条
+   ========================================= */
+::-webkit-scrollbar {
+    width: 8px;
+    /* 滚动条的宽度，改细一点更优雅 */
+    height: 8px;
+    /* 横向滚动条的高度 */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* 轨道设为透明，完美融入你的背景图 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 182, 193, 0.6);
+    /* 樱花粉，带60%透明度 */
+    border-radius: 4px;
+    /* 让滚动条上下两端变得圆润 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 105, 180, 0.9);
+    /* 鼠标放上去时，颜色变深发亮 */
+}
+
+
+/* =========================================
+   终极细节：全局自定义鼠标指针
+   ========================================= */
+
+/* 1. 网页全局默认的鼠标指针 */
+body,
+html {
+    /* 注意：后面的 , auto 是必须写的“保底机制”，如果图片加载失败就用默认鼠标 */
+    cursor: url('../img/cursor.png'), auto !important;
+}
+
+/* 2. 当鼠标悬停在链接、按钮、菜单上时的指针 (可选) */
+/* 如果你只有一张图，把 url 里的名字改成一样的就行 */
+a,
+button,
+.menu-item,
+.article-title {
+    cursor: url('../img/cursor.png'), pointer !important;
+}
+
+/* 代码块精致圆角与发光 */
+code {
+    border-radius: 6px !important;
+    font-family: "Fira Code", monospace;
+    /* 如果你装了这款极客字体的话 */
+}
+
+.highlight {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+    /* 淡淡的粉色投影 */
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+/* 顺便优化一下那个回到顶部按钮里的箭头符号 */
+#back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial";
+    /* 确保箭头居中 */
+}

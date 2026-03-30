@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/my-tech-blog/scss/style.min.78e3eda98b060228cbb9ecc877defcd246a7521ee34d6a2ed82116bf43ef4b6d.css"><meta property='og:title' content="Python">
+<link rel="stylesheet" href="/my-tech-blog/scss/style.min.6294ee863f5addbe3dbd90a27683bc99e42abd26405c4047d148860cf9ca5448.css"><meta property='og:title' content="Python">
 <meta property='og:description' content="探索脉冲神经网络的废物大学生">
 <meta property='og:url' content='http://localhost:1313/my-tech-blog/tags/python/'>
 <meta property='og:site_name' content='ym的博客'>
@@ -183,7 +183,67 @@
         </div>
         
 <script type="text/javascript" src="/my-tech-blog/ts/main.c4ea5fae42557065c5cfb9168d8bbe3739681c68ae422986a88389ced12669ad.js" defer></script>
+<div id="read-progress"
+    style="position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, #ff69b4, #da70d6); z-index: 99999; width: 0; transition: width 0.1s; box-shadow: 0 0 10px #ff1493;">
+</div>
 
+<div id="back-to-top" title="回到顶部"
+    style="position: fixed; bottom: -60px; right: 40px; width: 45px; height: 45px; background: rgba(255, 182, 193, 0.8); color: #fff; font-size: 20px; text-align: center; line-height: 45px; cursor: pointer; border-radius: 50%; z-index: 99998; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); border: 2px solid #ff1493;">
+    ▲</div>
+
+<script>
+    (function () {
+        
+        var bt = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function () {
+            var st = document.documentElement.scrollTop || document.body.scrollTop;
+            var sh = document.documentElement.scrollHeight || document.body.scrollHeight;
+            var ch = document.documentElement.clientHeight || document.body.clientHeight;
+            
+            document.getElementById('read-progress').style.width = (st / (sh - ch)) * 100 + '%';
+            
+            if (st > 300) { bt.style.bottom = '30px'; bt.style.opacity = '1'; }
+            else { bt.style.bottom = '-60px'; bt.style.opacity = '0'; }
+        });
+        bt.onclick = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+        
+        var OriginTitle = document.title;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { document.title = '(つェ⊂) 神经元休眠中...'; }
+            else { document.title = '(*´∇｀*) 突触恢复！' + OriginTitle; setTimeout(function () { document.title = OriginTitle }, 2000); }
+        });
+
+        
+        function runtime() {
+            var start = new Date("2026-03-30"); 
+            var now = new Date();
+            var diff = now - start;
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            
+            var footer = document.querySelector('.footer');
+            if (footer && !document.getElementById('run-time')) {
+                var div = document.createElement('div');
+                div.id = 'run-time';
+                div.style.cssText = "font-size: 12px; color: #ff69b4; margin-top: 10px;";
+                div.innerHTML = "⚡ 神经元持续放电: " + days + " 天";
+                footer.appendChild(div);
+            }
+        }
+        setInterval(runtime, 1000);
+
+        
+        document.body.addEventListener('click', function (e) {
+            const words = ["Spike!", "0", "1", "SNN", "Bug-Free", "LIF", "Happy!", "Neuro!", "Fire!", "Synapse!"];
+            const span = document.createElement('span');
+            span.textContent = words[Math.floor(Math.random() * words.length)];
+            span.style.cssText = `position:absolute;left:${e.pageX}px;top:${e.pageY - 20}px;color:#ff69b4;font-weight:bold;transition:all 1s;pointer-events:none;z-index:99999;`;
+            document.body.appendChild(span);
+            setTimeout(() => { span.style.top = `${e.pageY - 120}px`; span.style.opacity = '0'; }, 10);
+            setTimeout(() => span.remove(), 1000);
+        });
+    })();
+</script>
 
     </body>
 </html>

@@ -1,0 +1,77 @@
+<div id="read-progress"
+    style="position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(to right, #ff69b4, #da70d6); z-index: 99999; width: 0; transition: width 0.1s; box-shadow: 0 0 10px #ff1493;">
+</div>
+
+<div id="back-to-top" title="回到顶部"
+    style="position: fixed; bottom: -60px; right: 40px; width: 45px; height: 45px; background: rgba(255, 182, 193, 0.8); color: #fff; font-size: 20px; text-align: center; line-height: 45px; cursor: pointer; border-radius: 50%; z-index: 99998; transition: all 0.3s; box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); border: 2px solid #ff1493;">
+    ▲</div>
+
+<script>
+    (function () {
+        // 1. 回到顶部 & 进度条
+        var bt = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function () {
+            var st = document.documentElement.scrollTop || document.body.scrollTop;
+            var sh = document.documentElement.scrollHeight || document.body.scrollHeight;
+            var ch = document.documentElement.clientHeight || document.body.clientHeight;
+            // 进度条
+            document.getElementById('read-progress').style.width = (st / (sh - ch)) * 100 + '%';
+            // 回到顶部按钮
+            if (st > 300) { bt.style.bottom = '30px'; bt.style.opacity = '1'; }
+            else { bt.style.bottom = '-60px'; bt.style.opacity = '0'; }
+        });
+        bt.onclick = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+        // 2. 藏猫猫
+        var OriginTitle = document.title;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { document.title = '(つェ⊂) 神经元休眠中...'; }
+            else { document.title = '(*´∇｀*) 突触恢复！' + OriginTitle; setTimeout(function () { document.title = OriginTitle }, 2000); }
+        });
+
+        // 3. 网站运行时间 (增强版：自动侦测并注入)
+        function runtime() {
+            var start = new Date("2026-03-01"); // 👈 确认这是你的建站日期
+            var now = new Date();
+            var diff = now - start;
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+            // 目标：抓取 Stack 主题侧边栏底部的 footer 区域
+            // 我们尝试多个可能的选择器，确保万无一失
+            var target = document.querySelector('.sidebar footer') ||
+                document.querySelector('.footer') ||
+                document.querySelector('.sidebar .copyright');
+
+            if (target && !document.getElementById('run-time')) {
+                var div = document.createElement('div');
+                div.id = 'run-time';
+                // 样式调整：确保在粉色背景上清晰可见
+                div.style.cssText = "font-size: 13px; color: #ff69b4; margin-top: 15px; font-weight: bold; opacity: 0.9;";
+                div.innerHTML = "⚡ 神经元持续放电: " + days + " 天";
+                target.appendChild(div);
+            }
+        }
+
+        // 为了防止网页还没加载完就运行，我们每隔 500 毫秒检查一次，直到挂载成功
+        var timer = setInterval(function () {
+            runtime();
+            if (document.getElementById('run-time')) {
+                clearInterval(timer); // 挂载成功后停止检查，节省性能
+            }
+        }, 500);
+
+        // 每隔一小时刷新一次天数（可选）
+        setInterval(runtime, 3600000);
+
+        // 4. 鼠标爆字
+        document.body.addEventListener('click', function (e) {
+            const words = ["Spike!", "0", "1", "SNN", "Bug-Free", "LIF", "Happy!", "Neuro!", "Fire!", "Synapse!"];
+            const span = document.createElement('span');
+            span.textContent = words[Math.floor(Math.random() * words.length)];
+            span.style.cssText = `position:absolute;left:${e.pageX}px;top:${e.pageY - 20}px;color:#ff69b4;font-weight:bold;transition:all 1s;pointer-events:none;z-index:99999;`;
+            document.body.appendChild(span);
+            setTimeout(() => { span.style.top = `${e.pageY - 120}px`; span.style.opacity = '0'; }, 10);
+            setTimeout(() => span.remove(), 1000);
+        });
+    })();
+</script>
