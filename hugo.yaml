@@ -19,6 +19,8 @@ params:
   # 加入下面这两行，强制首页抓取 posts 文件夹！
   article:
     math: true
+    readingTime: true  # 开启阅读时长
+    wordCount: true    # 开启字数统计
   customCSS:
     - scss/custom.scss
   mainSections:
@@ -45,6 +47,7 @@ params:
       emitMetadata: 0
       lightTheme: light
       darkTheme: transparent_dark  # 完美适配Stack主题的暗黑模式
+
 
 menu:
   main:

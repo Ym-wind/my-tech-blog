@@ -120,21 +120,44 @@
                     </li>
                 
             </ol>
-        </li>
+        </li>  
+        <div class="sidebar-custom-footer" style="
+            margin-top: auto; 
+            padding: 15px 20px; /* 这里的 20px 与主题侧边栏对齐 */
+            border-top: 1px dashed rgba(255, 105, 180, 0.2); /* 增加一条淡淡的虚线分割线 */
+        ">
         
-        <div class="runtime-box" style="
-                padding: 20px; 
-                margin-top: auto; 
+            <div class="runtime-box" style="
                 display: flex; 
                 align-items: center; 
                 gap: 8px; 
                 color: #ff69b4; 
-                font-size: 13px; 
+                font-size: 14px; /* 稍微缩小一点，增加精致感 */
                 font-weight: bold;
                 white-space: nowrap;
+                margin-bottom: 15px; /* 与下方的音乐卡片拉开间距 */
             ">
-            <span>⚡</span>
-            <span>神经元放电: <span id="run-time-days">0</span> 天</span>
+                <span style="filter: drop-shadow(0 0 2px #ff69b4);">⚡</span>
+                <span>神经元放电: <span id="run-time-days">29</span> 天</span>
+            </div>
+        
+            <div class="music-card">
+                <p style="
+                    font-size: 14px; 
+                    color: #fa5871; 
+                    margin-bottom: 8px; 
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                ">
+                    <span>🎵</span> ym 的脉冲节拍 :
+                </p>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86"
+                    style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"
+                    src="//music.163.com/outchain/player?type=0&id=12526805946&auto=0&height=66">
+                </iframe>
+            </div>
         </div>
     </aside>
 
@@ -241,6 +264,7 @@
             setTimeout(() => span.remove(), 1000);
         });
     })();
+    
 </script>
 
     </body>
